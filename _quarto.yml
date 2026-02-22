@@ -3,17 +3,16 @@ project:
   output-dir: docs  # Important for GitHub Pages
 
 website:
-  title: "MAT 186 Lecture Notes"
   navbar:
     left:
-      - href: index.qmd
-        text: Home
-      - href: chapter1.qmd
-        text: "1. Toolbox"
-      - href: chapter2.qmd
-        text: "2. Programming"
-      - href: ECO-Alignment.qmd
-        text: "ECO Alignment"
+      - text: "Home"
+        href: index.qmd
+      - text: "1. The Toolbox"
+        href: chapter1.qmd
+      - text: "2. R Foundations"
+        href: chapter2.qmd
+      - text: "ECO Alignment"
+        href: ECO-Alignment.qmd
 
 format:
   html:

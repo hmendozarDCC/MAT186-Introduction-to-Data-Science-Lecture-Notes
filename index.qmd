@@ -1,1 +1,19 @@
-# MAT186-Introduction-to-Data-Science-Lecture-Notes
+---
+title: "MAT 186: Introduction to Data Science"
+subtitle: "Interactive Lecture Notes"
+---
+
+Welcome to the official OER Lecture Notes for MAT 186. These materials are designed to provide a theoretical and practical foundation in Data Science using R and Quarto.
+
+## Course Goals
+- Master the Data Science workflow (Import, Tidy, Transform, Visualize, Model, Communicate).
+- Build reproducible reports using Quarto and GitHub.
+- Apply statistical inference to real-world datasets.
+
+## License
+This project is an Open Educational Resource (OER). It is licensed under a [Creative Commons Attribution 4.0 International License](https://creativecommons.org/licenses/by/4.0/). 
+
+## OER References
+These notes are built upon the following open resources:
+- *R for Data Science (2e)* by Hadley Wickham & Mine Çetinkaya-Rundel.
+- *Introduction to Modern Statistics* by Mine Çetinkaya-Rundel and Johanna Hardin.

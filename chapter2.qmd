@@ -1,0 +1,14 @@
+---
+title: "Chapter 2: R Programming Foundations"
+---
+
+::: {.callout-note}
+## Learning Objectives (ECO Alignment)
+By the end of this chapter, you will be able to:
+1. Identify and create different R object types (Vectors, Data Frames).
+2. Use functions and arguments to manipulate data.
+3. Install and load R packages via the Tidyverse.
+:::
+
+# Introduction to R
+R is more than a calculator; it is an object-oriented language. In Data Science, we store our data in objects so we can transform and visualize them efficiently.

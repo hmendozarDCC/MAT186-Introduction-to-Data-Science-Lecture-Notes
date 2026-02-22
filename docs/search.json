@@ -26,5 +26,40 @@
     "title": "Chapter 1: The Toolbox for a Data Scientist",
     "section": "",
     "text": "Before we install the software, let’s look at the path data takes from a raw file to a finished report."
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "MAT 186: Introduction to Data Science",
+    "section": "",
+    "text": "Welcome to the official OER Lecture Notes for MAT 186. These materials are designed to provide a theoretical and practical foundation in Data Science using R and Quarto."
+  },
+  {
+    "objectID": "index.html#course-goals",
+    "href": "index.html#course-goals",
+    "title": "MAT 186: Introduction to Data Science",
+    "section": "Course Goals",
+    "text": "Course Goals\n\nMaster the Data Science workflow (Import, Tidy, Transform, Visualize, Model, Communicate).\nBuild reproducible reports using Quarto and GitHub.\nApply statistical inference to real-world datasets."
+  },
+  {
+    "objectID": "index.html#license",
+    "href": "index.html#license",
+    "title": "MAT 186: Introduction to Data Science",
+    "section": "License",
+    "text": "License\nThis project is an Open Educational Resource (OER). It is licensed under a Creative Commons Attribution 4.0 International License."
+  },
+  {
+    "objectID": "index.html#oer-references",
+    "href": "index.html#oer-references",
+    "title": "MAT 186: Introduction to Data Science",
+    "section": "OER References",
+    "text": "OER References\nThese notes are built upon the following open resources: - R for Data Science (2e) by Hadley Wickham & Mine Çetinkaya-Rundel. - Introduction to Modern Statistics by Mine Çetinkaya-Rundel and Johanna Hardin."
+  },
+  {
+    "objectID": "chapter2.html",
+    "href": "chapter2.html",
+    "title": "Chapter 2: R Programming Foundations",
+    "section": "",
+    "text": "NoteLearning Objectives (ECO Alignment)\n\n\n\nBy the end of this chapter, you will be able to: 1. Identify and create different R object types (Vectors, Data Frames). 2. Use functions and arguments to manipulate data. 3. Install and load R packages via the Tidyverse.\n\n\n\nIntroduction to R\nR is more than a calculator; it is an object-oriented language. In Data Science, we store our data in objects so we can transform and visualize them efficiently."
   }
 ]
