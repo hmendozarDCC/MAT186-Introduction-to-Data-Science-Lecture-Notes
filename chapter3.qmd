@@ -1,0 +1,21 @@
+project:
+  type: website
+  output-dir: docs  # Important for GitHub Pages
+
+website:
+  navbar:
+    left:
+      - text: "Home"
+        href: index.qmd
+      - text: "1. The Toolbox"
+        href: chapter1.qmd
+      - text: "2. R Foundations"
+        href: chapter2.qmd
+      - text: "ECO Alignment"
+        href: ECO-Alignment.qmd
+
+format:
+  html:
+    theme: cosmo
+    toc: true
+    code-fold: true # Allows students to hide/show R code

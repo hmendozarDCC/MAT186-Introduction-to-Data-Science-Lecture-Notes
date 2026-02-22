@@ -1,14 +1,180 @@
 ---
-title: "Chapter 2: R Programming Foundations"
+title: "Chapter 2. Introduction to R programming"
+subtitle: "Programming in R, reading data into R, accessing R packages, writing R functions, and organizing and commenting on R code"
+format: html
 ---
 
 ::: {.callout-note}
 ## Learning Objectives (ECO Alignment)
 By the end of this chapter, you will be able to:
-1. Identify and create different R object types (Vectors, Data Frames).
-2. Use functions and arguments to manipulate data.
-3. Install and load R packages via the Tidyverse.
+1.  **Program in R:** Understand object-oriented logic and the assignment operator.
+2.  **Read Data:** Import external datasets into the R environment.
+3.  **Access Packages:** Install and load specialized toolkits (The Tidyverse).
+4.  **Write Functions:** Automate tasks by creating custom R functions.
+5.  **Organize & Comment:** Apply professional standards for readable, reproducible code.
 :::
 
-# Introduction to R
-R is more than a calculator; it is an object-oriented language. In Data Science, we store our data in objects so we can transform and visualize them efficiently.
+# 2.1 Programming in R
+
+R is an **object-oriented** language. This means we store data (numbers, text, or entire tables) in "objects" using the assignment operator `<-`. 
+
+
+
+```{r}
+# Storing a numeric vector
+patient_ids <- c(101, 102, 103, 104)
+
+# Storing a character vector
+treatment_group <- c("Control", "Placebo", "Active", "Active")
+```
+
+## 2.2 Accessing R Packages
+
+Packages are collections of functions, documentation, and sample data sets written by the R community to solve specific problems. In MAT 186, we use the **tidyverse** package as our primary toolkit. 
+
+
+
+To use a package, you must follow a two-step process:
+
+1.  **Installation:** This downloads the package from CRAN (the R "App Store") to your hard drive. You typically only need to do this once per computer.
+2.  **Accessing (Loading):** This "opens the app" and loads the functions into your current R session. You must do this every time you restart RStudio.
+
+### The Analogy: The Smartphone
+| Step | R Command | Smartphone Equivalent |
+|:---|:---|:---|
+| **Step 1** | `install.packages("tidyverse")` | Downloading an App from the App Store. |
+| **Step 2** | `library(tidyverse)` | Tapping the App icon to open it. |
+
+::: {.callout-important}
+## Syntax Reminder
+Note that when you **install**, the package name must be in quotes: `"tidyverse"`. When you load the **library**, quotes are not required.
+:::
+
+```{r}
+# Do this once
+# install.packages("tidyverse")
+
+# Do this at the start of every script
+library(tidyverse)
+```
+
+## 2.3 Reading Data into R
+
+In **Lab 5**, we move beyond simple vectors and import full datasets. Data scientists rarely type in their own data; they read it from external files. The most common format is the **CSV** (Comma Separated Values) file.
+
+### Loading the Low Birth Weight (LBW) Dataset
+For our analysis, we will use the `lbw.csv` dataset, which contains information on risk factors associated with low birth weight.
+
+
+
+To read this file into R, we use the `read_csv()` function from the `tidyverse` library:
+
+```{r}
+library(tidyverse)
+
+# Reading the lbw.csv data into an object named 'lbw_data'
+# Assumes the file is located in a folder named 'data'
+lbw_data <- read_csv("data/lbw.csv")
+
+# Inspecting the first 6 rows of the dataset
+head(lbw_data)
+
+```
+
+::: {.callout-note}
+
+Understanding the Data Structure
+Once imported, R treats lbw_data as a Data Frame.
+
+Columns: Represent variables (e.g., age, lwt, smoke).
+
+Rows: Represent individual observations (e.g., each mother in the study).
+:::
+
+**Troubleshooting the File Path**
+If R gives you an error saying the file does not exist:
+
+Ensure lbw.csv is saved in your project folder.
+
+Check your spelling (R is case-sensitive!).
+
+Use getwd() to verify R is looking in the correct folder.
+
+
+
+## 2.4 Writing R Functions
+
+If you need to perform the same task multiple times, you should write a function. Functions encapsulate a sequence of operations into a single command, making your code more readable and less prone to error.
+
+A function consists of:
+1.  **A Name:** What you call the function (e.g., `grams_to_lbs`).
+2.  **Arguments:** The input data the function needs to work.
+3.  **The Body:** The code inside the curly braces `{}` that performs the math.
+
+### Example: Converting Birth Weight
+The `lbw.csv` dataset records birth weight in grams (`bwt`). We can write a function to convert those values to pounds.
+
+
+
+```{r}
+# Defining the function
+grams_to_lbs <- function(grams) {
+  lbs <- grams * 0.00220462
+  return(lbs)
+}
+
+# Testing the function with a single value
+grams_to_lbs(3000)
+
+# Applying the function to the 'bwt' column in our dataset
+lbw_data$bwt_lbs <- grams_to_lbs(lbw_data$bwt)
+
+```
+
+## 2.5 Organizing and Commenting on R Code
+
+According to our ECO, code must be well-documented and organized to ensure **Reproducibility**. A reproducible script is one that a peer (or your future self) can run and understand without needing to ask you questions.
+
+### Best Practices for MAT 186
+
+#### 1. The "Why" Rule of Commenting
+Use the `#` symbol to write comments. Comments should explain the **logic** or **justification** for a step, not just describe the code.
+
+* **Weak:** `library(tidyverse) # load tidyverse` (The code already says this).
+* **Strong:** `library(tidyverse) # loading toolkit for data import and wrangling`
+
+#### 2. Code Sections
+Use RStudio’s section headers (`Ctrl + Shift + R`) to create a table of contents for your script. This makes long analyses of datasets like `lbw.csv` much easier to navigate.
+
+
+
+#### 3. Consistent Naming
+Always use `snake_case` (all lowercase with underscores) for your objects. 
+* **Good:** `lbw_clean`, `low_birth_weight_analysis`
+* **Avoid:** `LBWData`, `Data1`, `test`
+
+### Example of an Organized Script
+Here is how your script for **Lab 5** should look:
+
+```{r}
+
+# --- 1. Setup & Data Import ---
+# Purpose: Analyze risk factors for low birth weight
+library(tidyverse)
+lbw <- read_csv("data/lbw.csv")
+
+# --- 2. Data Cleaning ---
+# Convert birth weight from grams to pounds for US reporting standards
+grams_to_lbs <- function(g) { g * 0.0022 }
+lbw$bwt_lbs <- grams_to_lbs(lbw$bwt)
+
+# --- 3. Initial Inspection ---
+# Verify that columns were imported with correct data types
+glimpse(lbw)
+```
+
+::: {.callout-important}
+
+Reproducibility Check
+Before submitting any lab, always restart your R session (Ctrl + Shift + F10) and run your entire script from top to bottom to ensure it works without errors.
+:::

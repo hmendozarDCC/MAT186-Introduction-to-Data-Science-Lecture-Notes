@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Chapter 2: R Programming Foundations</title>
+<title>Chapter 2. Introduction to R programming</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -19,6 +19,41 @@ ul.task-list li input[type="checkbox"] {
   width: 0.8em;
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
 </style>
 
@@ -116,7 +151,26 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#introduction-to-r" id="toc-introduction-to-r" class="nav-link active" data-scroll-target="#introduction-to-r">Introduction to R</a></li>
+  <li><a href="#programming-in-r" id="toc-programming-in-r" class="nav-link active" data-scroll-target="#programming-in-r">2.1 Programming in R</a>
+  <ul class="collapse">
+  <li><a href="#accessing-r-packages" id="toc-accessing-r-packages" class="nav-link" data-scroll-target="#accessing-r-packages">2.2 Accessing R Packages</a>
+  <ul class="collapse">
+  <li><a href="#the-analogy-the-smartphone" id="toc-the-analogy-the-smartphone" class="nav-link" data-scroll-target="#the-analogy-the-smartphone">The Analogy: The Smartphone</a></li>
+  </ul></li>
+  <li><a href="#reading-data-into-r" id="toc-reading-data-into-r" class="nav-link" data-scroll-target="#reading-data-into-r">2.3 Reading Data into R</a>
+  <ul class="collapse">
+  <li><a href="#loading-the-low-birth-weight-lbw-dataset" id="toc-loading-the-low-birth-weight-lbw-dataset" class="nav-link" data-scroll-target="#loading-the-low-birth-weight-lbw-dataset">Loading the Low Birth Weight (LBW) Dataset</a></li>
+  </ul></li>
+  <li><a href="#writing-r-functions" id="toc-writing-r-functions" class="nav-link" data-scroll-target="#writing-r-functions">2.4 Writing R Functions</a>
+  <ul class="collapse">
+  <li><a href="#example-converting-birth-weight" id="toc-example-converting-birth-weight" class="nav-link" data-scroll-target="#example-converting-birth-weight">Example: Converting Birth Weight</a></li>
+  </ul></li>
+  <li><a href="#organizing-and-commenting-on-r-code" id="toc-organizing-and-commenting-on-r-code" class="nav-link" data-scroll-target="#organizing-and-commenting-on-r-code">2.5 Organizing and Commenting on R Code</a>
+  <ul class="collapse">
+  <li><a href="#best-practices-for-mat-186" id="toc-best-practices-for-mat-186" class="nav-link" data-scroll-target="#best-practices-for-mat-186">Best Practices for MAT 186</a></li>
+  <li><a href="#example-of-an-organized-script" id="toc-example-of-an-organized-script" class="nav-link" data-scroll-target="#example-of-an-organized-script">Example of an Organized Script</a></li>
+  </ul></li>
+  </ul></li>
   </ul>
 </nav>
     </div>
@@ -125,7 +179,8 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Chapter 2: R Programming Foundations</h1>
+<h1 class="title">Chapter 2. Introduction to R programming</h1>
+<p class="subtitle lead">Programming in R, reading data into R, accessing R packages, writing R functions, and organizing and commenting on R code</p>
 </div>
 
 
@@ -152,14 +207,275 @@ ul.task-list li input[type="checkbox"] {
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>By the end of this chapter, you will be able to: 1. Identify and create different R object types (Vectors, Data Frames). 2. Use functions and arguments to manipulate data. 3. Install and load R packages via the Tidyverse.</p>
+<p>By the end of this chapter, you will be able to: 1. <strong>Program in R:</strong> Understand object-oriented logic and the assignment operator. 2. <strong>Read Data:</strong> Import external datasets into the R environment. 3. <strong>Access Packages:</strong> Install and load specialized toolkits (The Tidyverse). 4. <strong>Write Functions:</strong> Automate tasks by creating custom R functions. 5. <strong>Organize &amp; Comment:</strong> Apply professional standards for readable, reproducible code.</p>
 </div>
 </div>
-<section id="introduction-to-r" class="level1">
-<h1>Introduction to R</h1>
-<p>R is more than a calculator; it is an object-oriented language. In Data Science, we store our data in objects so we can transform and visualize them efficiently.</p>
+<section id="programming-in-r" class="level1">
+<h1>2.1 Programming in R</h1>
+<p>R is an <strong>object-oriented</strong> language. This means we store data (numbers, text, or entire tables) in “objects” using the assignment operator <code>&lt;-</code>.</p>
+<div class="cell">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Storing a numeric vector</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>patient_ids <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">101</span>, <span class="dv">102</span>, <span class="dv">103</span>, <span class="dv">104</span>)</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Storing a character vector</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>treatment_group <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="st">"Control"</span>, <span class="st">"Placebo"</span>, <span class="st">"Active"</span>, <span class="st">"Active"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</details>
+</div>
+<section id="accessing-r-packages" class="level2">
+<h2 class="anchored" data-anchor-id="accessing-r-packages">2.2 Accessing R Packages</h2>
+<p>Packages are collections of functions, documentation, and sample data sets written by the R community to solve specific problems. In MAT 186, we use the <strong>tidyverse</strong> package as our primary toolkit.</p>
+<p>To use a package, you must follow a two-step process:</p>
+<ol type="1">
+<li><strong>Installation:</strong> This downloads the package from CRAN (the R “App Store”) to your hard drive. You typically only need to do this once per computer.</li>
+<li><strong>Accessing (Loading):</strong> This “opens the app” and loads the functions into your current R session. You must do this every time you restart RStudio.</li>
+</ol>
+<section id="the-analogy-the-smartphone" class="level3">
+<h3 class="anchored" data-anchor-id="the-analogy-the-smartphone">The Analogy: The Smartphone</h3>
+<table class="caption-top table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Step</th>
+<th style="text-align: left;">R Command</th>
+<th style="text-align: left;">Smartphone Equivalent</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;"><strong>Step 1</strong></td>
+<td style="text-align: left;"><code>install.packages("tidyverse")</code></td>
+<td style="text-align: left;">Downloading an App from the App Store.</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;"><strong>Step 2</strong></td>
+<td style="text-align: left;"><code>library(tidyverse)</code></td>
+<td style="text-align: left;">Tapping the App icon to open it.</td>
+</tr>
+</tbody>
+</table>
+<div class="callout callout-style-default callout-important callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+<span class="screen-reader-only">Important</span>Syntax Reminder
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Note that when you <strong>install</strong>, the package name must be in quotes: <code>"tidyverse"</code>. When you load the <strong>library</strong>, quotes are not required.</p>
+</div>
+</div>
+<div class="cell">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Do this once</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="co"># install.packages("tidyverse")</span></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Do this at the start of every script</span></span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</details>
+<div class="cell-output cell-output-stderr">
+<pre><code>── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──
+✔ dplyr     1.2.0     ✔ readr     2.1.6
+✔ forcats   1.0.1     ✔ stringr   1.6.0
+✔ ggplot2   4.0.2     ✔ tibble    3.3.1
+✔ lubridate 1.9.5     ✔ tidyr     1.3.2
+✔ purrr     1.2.1     
+── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──
+✖ dplyr::filter() masks stats::filter()
+✖ dplyr::lag()    masks stats::lag()
+ℹ Use the conflicted package (&lt;http://conflicted.r-lib.org/&gt;) to force all conflicts to become errors</code></pre>
+</div>
+</div>
+</section>
+</section>
+<section id="reading-data-into-r" class="level2">
+<h2 class="anchored" data-anchor-id="reading-data-into-r">2.3 Reading Data into R</h2>
+<p>In <strong>Lab 5</strong>, we move beyond simple vectors and import full datasets. Data scientists rarely type in their own data; they read it from external files. The most common format is the <strong>CSV</strong> (Comma Separated Values) file.</p>
+<section id="loading-the-low-birth-weight-lbw-dataset" class="level3">
+<h3 class="anchored" data-anchor-id="loading-the-low-birth-weight-lbw-dataset">Loading the Low Birth Weight (LBW) Dataset</h3>
+<p>For our analysis, we will use the <code>lbw.csv</code> dataset, which contains information on risk factors associated with low birth weight.</p>
+<p>To read this file into R, we use the <code>read_csv()</code> function from the <code>tidyverse</code> library:</p>
+<div class="cell">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Reading the lbw.csv data into an object named 'lbw_data'</span></span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Assumes the file is located in a folder named 'data'</span></span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>lbw_data <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">"data/lbw.csv"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</details>
+<div class="cell-output cell-output-stderr">
+<pre><code>Rows: 189 Columns: 11
+── Column specification ────────────────────────────────────────────────────────
+Delimiter: ","
+dbl (11): rownames, low, smoke, race, age, lwt, ptl, ht, ui, ftv, bwt
+
+ℹ Use `spec()` to retrieve the full column specification for this data.
+ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.</code></pre>
+</div>
+<details class="code-fold">
+<summary>Code</summary>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Inspecting the first 6 rows of the dataset</span></span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(lbw_data)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</details>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 6 × 11
+  rownames   low smoke  race   age   lwt   ptl    ht    ui   ftv   bwt
+     &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt;
+1        1     0     0     2    19   182     0     0     1     0  2523
+2        2     0     0     3    33   155     0     0     0     3  2551
+3        3     0     1     1    20   105     0     0     0     1  2557
+4        4     0     1     1    21   108     0     0     1     2  2594
+5        5     0     1     1    18   107     0     0     1     0  2600
+6        6     0     0     3    21   124     0     0     0     0  2622</code></pre>
+</div>
+</div>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Note
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Understanding the Data Structure Once imported, R treats lbw_data as a Data Frame.</p>
+<p>Columns: Represent variables (e.g., age, lwt, smoke).</p>
+<p>Rows: Represent individual observations (e.g., each mother in the study).</p>
+</div>
+</div>
+<p><strong>Troubleshooting the File Path</strong> If R gives you an error saying the file does not exist:</p>
+<p>Ensure lbw.csv is saved in your project folder.</p>
+<p>Check your spelling (R is case-sensitive!).</p>
+<p>Use getwd() to verify R is looking in the correct folder.</p>
+</section>
+</section>
+<section id="writing-r-functions" class="level2">
+<h2 class="anchored" data-anchor-id="writing-r-functions">2.4 Writing R Functions</h2>
+<p>If you need to perform the same task multiple times, you should write a function. Functions encapsulate a sequence of operations into a single command, making your code more readable and less prone to error.</p>
+<p>A function consists of: 1. <strong>A Name:</strong> What you call the function (e.g., <code>grams_to_lbs</code>). 2. <strong>Arguments:</strong> The input data the function needs to work. 3. <strong>The Body:</strong> The code inside the curly braces <code>{}</code> that performs the math.</p>
+<section id="example-converting-birth-weight" class="level3">
+<h3 class="anchored" data-anchor-id="example-converting-birth-weight">Example: Converting Birth Weight</h3>
+<p>The <code>lbw.csv</code> dataset records birth weight in grams (<code>bwt</code>). We can write a function to convert those values to pounds.</p>
+<div class="cell">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Defining the function</span></span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>grams_to_lbs <span class="ot">&lt;-</span> <span class="cf">function</span>(grams) {</span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>  lbs <span class="ot">&lt;-</span> grams <span class="sc">*</span> <span class="fl">0.00220462</span></span>
+<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">return</span>(lbs)</span>
+<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb8-6"><a href="#cb8-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-7"><a href="#cb8-7" aria-hidden="true" tabindex="-1"></a><span class="co"># Testing the function with a single value</span></span>
+<span id="cb8-8"><a href="#cb8-8" aria-hidden="true" tabindex="-1"></a><span class="fu">grams_to_lbs</span>(<span class="dv">3000</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</details>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 6.61386</code></pre>
+</div>
+<details class="code-fold">
+<summary>Code</summary>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb10"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Applying the function to the 'bwt' column in our dataset</span></span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a>lbw_data<span class="sc">$</span>bwt_lbs <span class="ot">&lt;-</span> <span class="fu">grams_to_lbs</span>(lbw_data<span class="sc">$</span>bwt)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</details>
+</div>
+</section>
+</section>
+<section id="organizing-and-commenting-on-r-code" class="level2">
+<h2 class="anchored" data-anchor-id="organizing-and-commenting-on-r-code">2.5 Organizing and Commenting on R Code</h2>
+<p>According to our ECO, code must be well-documented and organized to ensure <strong>Reproducibility</strong>. A reproducible script is one that a peer (or your future self) can run and understand without needing to ask you questions.</p>
+<section id="best-practices-for-mat-186" class="level3">
+<h3 class="anchored" data-anchor-id="best-practices-for-mat-186">Best Practices for MAT 186</h3>
+<section id="the-why-rule-of-commenting" class="level4">
+<h4 class="anchored" data-anchor-id="the-why-rule-of-commenting">1. The “Why” Rule of Commenting</h4>
+<p>Use the <code>#</code> symbol to write comments. Comments should explain the <strong>logic</strong> or <strong>justification</strong> for a step, not just describe the code.</p>
+<ul>
+<li><strong>Weak:</strong> <code>library(tidyverse) # load tidyverse</code> (The code already says this).</li>
+<li><strong>Strong:</strong> <code>library(tidyverse) # loading toolkit for data import and wrangling</code></li>
+</ul>
+</section>
+<section id="code-sections" class="level4">
+<h4 class="anchored" data-anchor-id="code-sections">2. Code Sections</h4>
+<p>Use RStudio’s section headers (<code>Ctrl + Shift + R</code>) to create a table of contents for your script. This makes long analyses of datasets like <code>lbw.csv</code> much easier to navigate.</p>
+</section>
+<section id="consistent-naming" class="level4">
+<h4 class="anchored" data-anchor-id="consistent-naming">3. Consistent Naming</h4>
+<p>Always use <code>snake_case</code> (all lowercase with underscores) for your objects. * <strong>Good:</strong> <code>lbw_clean</code>, <code>low_birth_weight_analysis</code> * <strong>Avoid:</strong> <code>LBWData</code>, <code>Data1</code>, <code>test</code></p>
+</section>
+</section>
+<section id="example-of-an-organized-script" class="level3">
+<h3 class="anchored" data-anchor-id="example-of-an-organized-script">Example of an Organized Script</h3>
+<p>Here is how your script for <strong>Lab 5</strong> should look:</p>
+<div class="cell">
+<details class="code-fold">
+<summary>Code</summary>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb11"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="co"># --- 1. Setup &amp; Data Import ---</span></span>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a><span class="co"># Purpose: Analyze risk factors for low birth weight</span></span>
+<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span>
+<span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a>lbw <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">"data/lbw.csv"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</details>
+<div class="cell-output cell-output-stderr">
+<pre><code>Rows: 189 Columns: 11
+── Column specification ────────────────────────────────────────────────────────
+Delimiter: ","
+dbl (11): rownames, low, smoke, race, age, lwt, ptl, ht, ui, ftv, bwt
+
+ℹ Use `spec()` to retrieve the full column specification for this data.
+ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.</code></pre>
+</div>
+<details class="code-fold">
+<summary>Code</summary>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb13"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="co"># --- 2. Data Cleaning ---</span></span>
+<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a><span class="co"># Convert birth weight from grams to pounds for US reporting standards</span></span>
+<span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a>grams_to_lbs <span class="ot">&lt;-</span> <span class="cf">function</span>(g) { g <span class="sc">*</span> <span class="fl">0.0022</span> }</span>
+<span id="cb13-4"><a href="#cb13-4" aria-hidden="true" tabindex="-1"></a>lbw<span class="sc">$</span>bwt_lbs <span class="ot">&lt;-</span> <span class="fu">grams_to_lbs</span>(lbw<span class="sc">$</span>bwt)</span>
+<span id="cb13-5"><a href="#cb13-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-6"><a href="#cb13-6" aria-hidden="true" tabindex="-1"></a><span class="co"># --- 3. Initial Inspection ---</span></span>
+<span id="cb13-7"><a href="#cb13-7" aria-hidden="true" tabindex="-1"></a><span class="co"># Verify that columns were imported with correct data types</span></span>
+<span id="cb13-8"><a href="#cb13-8" aria-hidden="true" tabindex="-1"></a><span class="fu">glimpse</span>(lbw)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</details>
+<div class="cell-output cell-output-stdout">
+<pre><code>Rows: 189
+Columns: 12
+$ rownames &lt;dbl&gt; 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18…
+$ low      &lt;dbl&gt; 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0…
+$ smoke    &lt;dbl&gt; 0, 0, 1, 1, 1, 0, 0, 0, 1, 1, 0, 0, 0, 0, 1, 1, 0, 1, 0, 1, 0…
+$ race     &lt;dbl&gt; 2, 3, 1, 1, 1, 3, 1, 3, 1, 1, 3, 3, 3, 3, 1, 1, 2, 1, 3, 1, 3…
+$ age      &lt;dbl&gt; 19, 33, 20, 21, 18, 21, 22, 17, 29, 26, 19, 19, 22, 30, 18, 1…
+$ lwt      &lt;dbl&gt; 182, 155, 105, 108, 107, 124, 118, 103, 123, 113, 95, 150, 95…
+$ ptl      &lt;dbl&gt; 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0…
+$ ht       &lt;dbl&gt; 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0…
+$ ui       &lt;dbl&gt; 1, 0, 0, 1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0…
+$ ftv      &lt;dbl&gt; 0, 3, 1, 2, 0, 0, 1, 1, 1, 0, 0, 1, 0, 2, 0, 0, 0, 3, 0, 1, 2…
+$ bwt      &lt;dbl&gt; 2523, 2551, 2557, 2594, 2600, 2622, 2637, 2637, 2663, 2665, 2…
+$ bwt_lbs  &lt;dbl&gt; 5.5506, 5.6122, 5.6254, 5.7068, 5.7200, 5.7684, 5.8014, 5.801…</code></pre>
+</div>
+</div>
+<div class="callout callout-style-default callout-important callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Important
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Reproducibility Check Before submitting any lab, always restart your R session (Ctrl + Shift + F10) and run your entire script from top to bottom to ensure it works without errors.</p>
+</div>
+</div>
 
 
+</section>
+</section>
 </section>
 
 </main> <!-- /main -->
