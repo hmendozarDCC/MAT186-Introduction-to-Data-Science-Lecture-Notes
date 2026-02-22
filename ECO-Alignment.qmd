@@ -5,13 +5,31 @@ format: html
 
 ## Alignment with MAT 186 Extended Course Outline (ECO)
 
-This document maps the **Interactive Lecture Notes** to the official Dutchess Community College ECO.
+This document maps the **Interactive Lecture Notes** to the official Dutchess Community College ECO and synchronizes them with the **MAT 186 Lab Manual**.
+
+---
+
+## Alignment Matrix: Lecture vs. Lab
+
+This table demonstrates how the theory on GitHub aligns with your practical lab work and the college's learning objectives.
+
+| Module | Lecture Chapter (GitHub) | Lab Manual Reference | ECO Learning Objective |
+| :--- | :--- | :--- | :--- |
+| **Toolbox** | [Ch 1: The Toolbox](chapter1.qmd) | Lab 1: Getting Started | Reproducible Workflow & Setup |
+| **Foundations** | [Ch 2: R Foundations](chapter2.qmd) | Lab 2: Basic Operations | R Language Proficiency |
+| **Visuals** | [Ch 3: Data Visualization](chapter3.qmd) | Lab 3: Intro to ggplot2 | Exploratory Data Analysis |
+| **Wrangling** | [Ch 4: Data Transformation](chapter4.qmd) | Lab 4: Dplyr Basics | Data Cleaning & Manipulation |
+
+---
+
+## Detailed Module Breakdown
 
 ### Module 1: Foundational Tools
 **ECO Topic:** Setup of data science environment and version control.
 **Learning Objective:** Students will demonstrate proficiency in using R, RStudio, and GitHub for reproducible research.
 
 * **OER Implementation:** [Chapter 1: The Toolbox](chapter1.qmd)
+* **Lab Integration:** Directly supports **Lab 1** by providing the theoretical "why" behind reproducibility and GitHub.
 * **References:** *R for Data Science (2e)*, Chapter 1.
 
 ### Module 2: R Programming
@@ -19,6 +37,7 @@ This document maps the **Interactive Lecture Notes** to the official Dutchess Co
 **Learning Objective:** Students will write functions and utilize R packages to process data.
 
 * **OER Implementation:** [Chapter 2: R Programming Foundations](chapter2.qmd)
+* **Lab Integration:** Provides the syntax foundations required for **Lab 2** (objects, vectors, and library loading).
 * **References:** *Hands-On Programming with R*, Parts 1 & 2.
 
 ---

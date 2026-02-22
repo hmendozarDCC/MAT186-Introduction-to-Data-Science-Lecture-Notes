@@ -11,14 +11,14 @@
     "href": "ECO-Alignment.html",
     "title": "ECO Alignment & Learning Objectives",
     "section": "",
-    "text": "This document maps the Interactive Lecture Notes to the official Dutchess Community College ECO.\n\n\nECO Topic: Setup of data science environment and version control. Learning Objective: Students will demonstrate proficiency in using R, RStudio, and GitHub for reproducible research.\n\nOER Implementation: Chapter 1: The Toolbox\nReferences: R for Data Science (2e), Chapter 1.\n\n\n\n\nECO Topic: Programming foundations, functions, and packages. Learning Objective: Students will write functions and utilize R packages to process data.\n\nOER Implementation: Chapter 2: R Programming Foundations\nReferences: Hands-On Programming with R, Parts 1 & 2."
+    "text": "This document maps the Interactive Lecture Notes to the official Dutchess Community College ECO and synchronizes them with the MAT 186 Lab Manual."
   },
   {
     "objectID": "ECO-Alignment.html#alignment-with-mat-186-extended-course-outline-eco",
     "href": "ECO-Alignment.html#alignment-with-mat-186-extended-course-outline-eco",
     "title": "ECO Alignment & Learning Objectives",
     "section": "",
-    "text": "This document maps the Interactive Lecture Notes to the official Dutchess Community College ECO.\n\n\nECO Topic: Setup of data science environment and version control. Learning Objective: Students will demonstrate proficiency in using R, RStudio, and GitHub for reproducible research.\n\nOER Implementation: Chapter 1: The Toolbox\nReferences: R for Data Science (2e), Chapter 1.\n\n\n\n\nECO Topic: Programming foundations, functions, and packages. Learning Objective: Students will write functions and utilize R packages to process data.\n\nOER Implementation: Chapter 2: R Programming Foundations\nReferences: Hands-On Programming with R, Parts 1 & 2."
+    "text": "This document maps the Interactive Lecture Notes to the official Dutchess Community College ECO and synchronizes them with the MAT 186 Lab Manual."
   },
   {
     "objectID": "chapter1.html#the-data-science-workflow",
@@ -61,5 +61,19 @@
     "title": "Chapter 2: R Programming Foundations",
     "section": "",
     "text": "NoteLearning Objectives (ECO Alignment)\n\n\n\nBy the end of this chapter, you will be able to: 1. Identify and create different R object types (Vectors, Data Frames). 2. Use functions and arguments to manipulate data. 3. Install and load R packages via the Tidyverse.\n\n\n\nIntroduction to R\nR is more than a calculator; it is an object-oriented language. In Data Science, we store our data in objects so we can transform and visualize them efficiently."
+  },
+  {
+    "objectID": "ECO-Alignment.html#alignment-matrix-lecture-vs.-lab",
+    "href": "ECO-Alignment.html#alignment-matrix-lecture-vs.-lab",
+    "title": "ECO Alignment & Learning Objectives",
+    "section": "Alignment Matrix: Lecture vs. Lab",
+    "text": "Alignment Matrix: Lecture vs. Lab\nThis table demonstrates how the theory on GitHub aligns with your practical lab work and the college’s learning objectives.\n\n\n\nModule\nLecture Chapter (GitHub)\nLab Manual Reference\nECO Learning Objective\n\n\n\n\nToolbox\nCh 1: The Toolbox\nLab 1: Getting Started\nReproducible Workflow & Setup\n\n\nFoundations\nCh 2: R Foundations\nLab 2: Basic Operations\nR Language Proficiency\n\n\nVisuals\nCh 3: Data Visualization\nLab 3: Intro to ggplot2\nExploratory Data Analysis\n\n\nWrangling\nCh 4: Data Transformation\nLab 4: Dplyr Basics\nData Cleaning & Manipulation"
+  },
+  {
+    "objectID": "ECO-Alignment.html#detailed-module-breakdown",
+    "href": "ECO-Alignment.html#detailed-module-breakdown",
+    "title": "ECO Alignment & Learning Objectives",
+    "section": "Detailed Module Breakdown",
+    "text": "Detailed Module Breakdown\n\nModule 1: Foundational Tools\nECO Topic: Setup of data science environment and version control. Learning Objective: Students will demonstrate proficiency in using R, RStudio, and GitHub for reproducible research.\n\nOER Implementation: Chapter 1: The Toolbox\nLab Integration: Directly supports Lab 1 by providing the theoretical “why” behind reproducibility and GitHub.\nReferences: R for Data Science (2e), Chapter 1.\n\n\n\nModule 2: R Programming\nECO Topic: Programming foundations, functions, and packages. Learning Objective: Students will write functions and utilize R packages to process data.\n\nOER Implementation: Chapter 2: R Programming Foundations\nLab Integration: Provides the syntax foundations required for Lab 2 (objects, vectors, and library loading).\nReferences: Hands-On Programming with R, Parts 1 & 2."
   }
 ]
