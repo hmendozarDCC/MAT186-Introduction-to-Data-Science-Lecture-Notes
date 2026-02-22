@@ -1,6 +1,14 @@
+---
+title: "Chapter 1: The Toolbox for a Data Scientist"
+---
 
+# Introduction
+To be a data scientist, you don't just need to know math; you need to know how to use the "tools of the trade."
 
 ::: {.callout-tip}
 ## Why this matters for MAT 186
 According to our course outline (ECO), mastering GitHub is not just about storage—it is about **Reproducibility**, a core pillar of modern data science.
 :::
+
+## The Data Science Workflow
+Before we install the software, let's look at the path data takes from a raw file to a finished report.

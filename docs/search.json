@@ -2,9 +2,9 @@
   {
     "objectID": "chapter1.html",
     "href": "chapter1.html",
-    "title": "MAT 186 Lecture Notes",
+    "title": "Chapter 1: The Toolbox for a Data Scientist",
     "section": "",
-    "text": "TipWhy this matters for MAT 186\n\n\n\nAccording to our course outline (ECO), mastering GitHub is not just about storage—it is about Reproducibility, a core pillar of modern data science."
+    "text": "To be a data scientist, you don’t just need to know math; you need to know how to use the “tools of the trade.”\n\n\n\n\n\n\nTipWhy this matters for MAT 186\n\n\n\nAccording to our course outline (ECO), mastering GitHub is not just about storage—it is about Reproducibility, a core pillar of modern data science.\n\n\n\n\nBefore we install the software, let’s look at the path data takes from a raw file to a finished report."
   },
   {
     "objectID": "ECO-Alignment.html",
@@ -19,5 +19,12 @@
     "title": "ECO Alignment & Learning Objectives",
     "section": "",
     "text": "This document maps the Interactive Lecture Notes to the official Dutchess Community College ECO.\n\n\nECO Topic: Setup of data science environment and version control. Learning Objective: Students will demonstrate proficiency in using R, RStudio, and GitHub for reproducible research.\n\nOER Implementation: Chapter 1: The Toolbox\nReferences: R for Data Science (2e), Chapter 1.\n\n\n\n\nECO Topic: Programming foundations, functions, and packages. Learning Objective: Students will write functions and utilize R packages to process data.\n\nOER Implementation: Chapter 2: R Programming Foundations\nReferences: Hands-On Programming with R, Parts 1 & 2."
+  },
+  {
+    "objectID": "chapter1.html#the-data-science-workflow",
+    "href": "chapter1.html#the-data-science-workflow",
+    "title": "Chapter 1: The Toolbox for a Data Scientist",
+    "section": "",
+    "text": "Before we install the software, let’s look at the path data takes from a raw file to a finished report."
   }
 ]
