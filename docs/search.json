@@ -4,7 +4,7 @@
     "href": "chapter1.html",
     "title": "Chapter 1: The Toolbox for a Data Scientist",
     "section": "",
-    "text": "To be a data scientist, you don’t just need to know math; you need to know how to use the “tools of the trade.”\n\n\n\n\n\n\nTipWhy this matters for MAT 186\n\n\n\nAccording to our course outline (ECO), mastering GitHub is not just about storage—it is about Reproducibility, a core pillar of modern data science.\n\n\n\n\nBefore we install the software, let’s look at the path data takes from a raw file to a finished report."
+    "text": "To be a data scientist, you don’t just need to know math; you need to know how to use the “tools of the trade.” Our goal is to move away from “point-and-click” analysis and toward scripted, reproducible workflows.\n\n\n\n\n\n\nTipWhy this matters for MAT 186\n\n\n\nAccording to our course outline (ECO), mastering GitHub and RStudio is not just about storage—it is about Reproducibility, a core pillar of modern data science.\n\n\n\n\nBefore we install the software, let’s look at the path data takes from a raw file to a finished report.\n\n\n\n\n\n\nNoteAccessibility: Workflow Breakdown\n\n\n\n\nImport: Loading data into R from various sources.\nTidy: Organizing data so each variable is a column and each observation is a row.\nThe Loop: We repeatedly Transform, Visualize, and Model data to find patterns.\nCommunicate: Sharing your findings using Quarto and GitHub.\n\n\n\n\n\n\n\nIn Lab 1: R and RStudio Installation, you will set up your environment. Think of it like this: * R (The Engine): The programming language that processes data. * RStudio (The Dashboard): The Integrated Development Environment (IDE) where you write your scripts and view your results.\n\n\n\n\nIn Lab 2: RStudio Project and Quarto Documents, we start using .qmd files. This allows us to practice “literate programming”—mixing our code with our written explanations so that anyone can follow our logic.\n\n\n\n\nAccording to our ECO, students must communicate technical findings effectively. In Lab 3: Mathematical Notation in Quarto, you will learn to use LaTeX notation.\nFor example, to explain the sample mean calculation in your report, you will use: $$\\bar{x} = \\frac{\\sum x_i}{n}$$\nWhich renders as: \\[\\bar{x} = \\frac{\\sum x_i}{n}\\]\n\n\n\n\nIn Lab 4: GitHub Repository, you will connect your local computer to the cloud. This ensures that every change you make is tracked, fulfilling the “reproducibility” requirement of modern data science.\n\n\n\n\nWickham, H., Çetinkaya-Rundel, M., & Grolemund, G. (2023). R for Data Science (2e)."
   },
   {
     "objectID": "ECO-Alignment.html",
@@ -25,7 +25,7 @@
     "href": "chapter1.html#the-data-science-workflow",
     "title": "Chapter 1: The Toolbox for a Data Scientist",
     "section": "",
-    "text": "Before we install the software, let’s look at the path data takes from a raw file to a finished report."
+    "text": "Before we install the software, let’s look at the path data takes from a raw file to a finished report.\n\n\n\n\n\n\nNoteAccessibility: Workflow Breakdown\n\n\n\n\nImport: Loading data into R from various sources.\nTidy: Organizing data so each variable is a column and each observation is a row.\nThe Loop: We repeatedly Transform, Visualize, and Model data to find patterns.\nCommunicate: Sharing your findings using Quarto and GitHub."
   },
   {
     "objectID": "index.html",
@@ -75,5 +75,40 @@
     "title": "ECO Alignment & Learning Objectives",
     "section": "Detailed Module Breakdown",
     "text": "Detailed Module Breakdown\n\nModule 1: Foundational Tools\nECO Topic: Setup of data science environment and version control. Learning Objective: Students will demonstrate proficiency in using R, RStudio, and GitHub for reproducible research.\n\nOER Implementation: Chapter 1: The Toolbox\nLab Integration: Directly supports:\n\nLab 1: R and RStudio Installation\nLab 2: RStudio Project and Quarto Documents\nLab 3: Mathematical Notation in Quarto\nLab 4: GitHub Repository\n\nReferences: R for Data Science (2e), Ch. 1 & 28.\n\n\n\nModule 2: Data Acquisition & Preparation\nECO Topic: Data structures, import methods, and cleaning. Learning Objective: Students will perform data manipulation and preparation for analysis.\n\nOER Implementation: Chapter 2: Data Acquisition\nLab Integration: Supports:\n\nLab 5: Getting data into R\nLab 6: Data collection\nLab 7: Cleaning Data\n\nReferences: R for Data Science (2e), “Import” and “Tidy” sections."
+  },
+  {
+    "objectID": "chapter1.html#r-and-rstudio-the-engine-and-the-dashboard",
+    "href": "chapter1.html#r-and-rstudio-the-engine-and-the-dashboard",
+    "title": "Chapter 1: The Toolbox for a Data Scientist",
+    "section": "",
+    "text": "In Lab 1: R and RStudio Installation, you will set up your environment. Think of it like this: * R (The Engine): The programming language that processes data. * RStudio (The Dashboard): The Integrated Development Environment (IDE) where you write your scripts and view your results."
+  },
+  {
+    "objectID": "chapter1.html#quarto-and-reproducibility",
+    "href": "chapter1.html#quarto-and-reproducibility",
+    "title": "Chapter 1: The Toolbox for a Data Scientist",
+    "section": "",
+    "text": "In Lab 2: RStudio Project and Quarto Documents, we start using .qmd files. This allows us to practice “literate programming”—mixing our code with our written explanations so that anyone can follow our logic."
+  },
+  {
+    "objectID": "chapter1.html#technical-communication-with-latex",
+    "href": "chapter1.html#technical-communication-with-latex",
+    "title": "Chapter 1: The Toolbox for a Data Scientist",
+    "section": "",
+    "text": "According to our ECO, students must communicate technical findings effectively. In Lab 3: Mathematical Notation in Quarto, you will learn to use LaTeX notation.\nFor example, to explain the sample mean calculation in your report, you will use: $$\\bar{x} = \\frac{\\sum x_i}{n}$$\nWhich renders as: \\[\\bar{x} = \\frac{\\sum x_i}{n}\\]"
+  },
+  {
+    "objectID": "chapter1.html#version-control-with-github",
+    "href": "chapter1.html#version-control-with-github",
+    "title": "Chapter 1: The Toolbox for a Data Scientist",
+    "section": "",
+    "text": "In Lab 4: GitHub Repository, you will connect your local computer to the cloud. This ensures that every change you make is tracked, fulfilling the “reproducibility” requirement of modern data science."
+  },
+  {
+    "objectID": "chapter1.html#oer-references",
+    "href": "chapter1.html#oer-references",
+    "title": "Chapter 1: The Toolbox for a Data Scientist",
+    "section": "",
+    "text": "Wickham, H., Çetinkaya-Rundel, M., & Grolemund, G. (2023). R for Data Science (2e)."
   }
 ]

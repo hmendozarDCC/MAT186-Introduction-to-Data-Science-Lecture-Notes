@@ -3,12 +3,55 @@ title: "Chapter 1: The Toolbox for a Data Scientist"
 ---
 
 # Introduction
-To be a data scientist, you don't just need to know math; you need to know how to use the "tools of the trade."
+To be a data scientist, you don't just need to know math; you need to know how to use the "tools of the trade." Our goal is to move away from "point-and-click" analysis and toward **scripted, reproducible workflows**.
 
 ::: {.callout-tip}
 ## Why this matters for MAT 186
-According to our course outline (ECO), mastering GitHub is not just about storage—it is about **Reproducibility**, a core pillar of modern data science.
+According to our course outline (ECO), mastering GitHub and RStudio is not just about storage—it is about **Reproducibility**, a core pillar of modern data science.
 :::
 
 ## The Data Science Workflow
-Before we install the software, let's look at the path data takes from a raw file to a finished report.
+Before we install the software, let's look at the path data takes from a raw file to a finished report. 
+
+
+
+::: {.callout-note}
+## Accessibility: Workflow Breakdown
+1. **Import:** Loading data into R from various sources.
+2. **Tidy:** Organizing data so each variable is a column and each observation is a row.
+3. **The Loop:** We repeatedly **Transform**, **Visualize**, and **Model** data to find patterns.
+4. **Communicate:** Sharing your findings using Quarto and GitHub.
+:::
+
+---
+
+## 1.1 R and RStudio: The Engine and the Dashboard
+In **Lab 1: R and RStudio Installation**, you will set up your environment. Think of it like this:
+* **R (The Engine):** The programming language that processes data.
+* **RStudio (The Dashboard):** The Integrated Development Environment (IDE) where you write your scripts and view your results.
+
+
+
+---
+
+## 1.2 Quarto and Reproducibility
+In **Lab 2: RStudio Project and Quarto Documents**, we start using `.qmd` files. This allows us to practice "literate programming"—mixing our code with our written explanations so that anyone can follow our logic.
+
+---
+
+## 1.3 Technical Communication with LaTeX
+According to our ECO, students must communicate technical findings effectively. In **Lab 3: Mathematical Notation in Quarto**, you will learn to use **LaTeX** notation.
+
+For example, to explain the sample mean calculation in your report, you will use:
+`$$\bar{x} = \frac{\sum x_i}{n}$$`
+
+Which renders as:
+$$\bar{x} = \frac{\sum x_i}{n}$$
+
+---
+
+## 1.4 Version Control with GitHub
+In **Lab 4: GitHub Repository**, you will connect your local computer to the cloud. This ensures that every change you make is tracked, fulfilling the "reproducibility" requirement of modern data science.
+
+## OER References
+* Wickham, H., Çetinkaya-Rundel, M., & Grolemund, G. (2023). [R for Data Science (2e)](https://r4ds.hadley.nz/).
