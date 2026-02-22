@@ -2,9 +2,9 @@
   {
     "objectID": "chapter1.html",
     "href": "chapter1.html",
-    "title": "Chapter 1: The Toolbox for a Data Scientist",
+    "title": "Chapter 1. The Toolbox for a Data Scientist: R Markdown, git, GitHub, R, and RStudio",
     "section": "",
-    "text": "To be a data scientist, you don’t just need to know math; you need to know how to use the “tools of the trade.” Our goal is to move away from “point-and-click” analysis and toward scripted, reproducible workflows.\n\n\n\n\n\n\nTipWhy this matters for MAT 186\n\n\n\nAccording to our course outline (ECO), mastering GitHub and RStudio is not just about storage—it is about Reproducibility, a core pillar of modern data science.\n\n\n\n\nBefore we install the software, let’s look at the path data takes from a raw file to a finished report.\n\n\n\n\n\n\nNoteAccessibility: Workflow Breakdown\n\n\n\n\nImport: Loading data into R from various sources.\nTidy: Organizing data so each variable is a column and each observation is a row.\nThe Loop: We repeatedly Transform, Visualize, and Model data to find patterns.\nCommunicate: Sharing your findings using Quarto and GitHub.\n\n\n\n\n\n\n\nIn Lab 1: R and RStudio Installation, you will set up your environment. Think of it like this: * R (The Engine): The programming language that processes data. * RStudio (The Dashboard): The Integrated Development Environment (IDE) where you write your scripts and view your results.\n\n\n\n\nIn Lab 2: RStudio Project and Quarto Documents, we start using .qmd files. This allows us to practice “literate programming”—mixing our code with our written explanations so that anyone can follow our logic.\n\n\n\n\nAccording to our ECO, students must communicate technical findings effectively. In Lab 3: Mathematical Notation in Quarto, you will learn to use LaTeX notation.\nFor example, to explain the sample mean calculation in your report, you will use: $$\\bar{x} = \\frac{\\sum x_i}{n}$$\nWhich renders as: \\[\\bar{x} = \\frac{\\sum x_i}{n}\\]\n\n\n\n\nIn Lab 4: GitHub Repository, you will connect your local computer to the cloud. This ensures that every change you make is tracked, fulfilling the “reproducibility” requirement of modern data science.\n\n\n\n\nWickham, H., Çetinkaya-Rundel, M., & Grolemund, G. (2023). R for Data Science (2e)."
+    "text": "To be a data scientist, you don’t just need to know math; you need to know how to use the “tools of the trade.” This chapter introduces the ecosystem we will use to ensure our work is reproducible and professional.\n\n\n\n\n\n\nTipWhy this matters for MAT 186\n\n\n\nAccording to our course outline (ECO), mastering git and GitHub is not just about storage—it is about Reproducibility, a core pillar of modern data science.\n\n\n\n\nBefore we install the software, let’s look at the path data takes from a raw file to a finished report.\n\n\n\n\n\n\nNoteAccessibility: Workflow Breakdown\n\n\n\n\nImport: Loading data into R from various sources.\nTidy: Organizing data so each variable is a column and each observation is a row.\nThe Loop: We repeatedly Transform, Visualize, and Model data to find patterns.\nCommunicate: Sharing your findings using R Markdown/Quarto and GitHub.\n\n\n\n\n\n\n\nIn Lab 1: R and RStudio Installation, you will set up your environment: * R: The programming language that processes data. * RStudio: The Integrated Development Environment (IDE) where you write scripts and view results.\n\n\n\n\nIn Lab 2: RStudio Project and Quarto Documents, we introduce literate programming. This allows us to combine narrative text, mathematical notation (LaTeX), and executable code in one reproducible document.\n\n\n\n\nIn Lab 4: GitHub Repository, you will connect your local computer to the cloud. git tracks your changes, while GitHub hosts your professional portfolio. This ensures your work meets the highest standards of scientific reproducibility.\n\n\n\n\nWickham, H., Çetinkaya-Rundel, M., & Grolemund, G. (2023). R for Data Science (2e)."
   },
   {
     "objectID": "ECO-Alignment.html",
@@ -23,9 +23,9 @@
   {
     "objectID": "chapter1.html#the-data-science-workflow",
     "href": "chapter1.html#the-data-science-workflow",
-    "title": "Chapter 1: The Toolbox for a Data Scientist",
+    "title": "Chapter 1. The Toolbox for a Data Scientist: R Markdown, git, GitHub, R, and RStudio",
     "section": "",
-    "text": "Before we install the software, let’s look at the path data takes from a raw file to a finished report.\n\n\n\n\n\n\nNoteAccessibility: Workflow Breakdown\n\n\n\n\nImport: Loading data into R from various sources.\nTidy: Organizing data so each variable is a column and each observation is a row.\nThe Loop: We repeatedly Transform, Visualize, and Model data to find patterns.\nCommunicate: Sharing your findings using Quarto and GitHub."
+    "text": "Before we install the software, let’s look at the path data takes from a raw file to a finished report.\n\n\n\n\n\n\nNoteAccessibility: Workflow Breakdown\n\n\n\n\nImport: Loading data into R from various sources.\nTidy: Organizing data so each variable is a column and each observation is a row.\nThe Loop: We repeatedly Transform, Visualize, and Model data to find patterns.\nCommunicate: Sharing your findings using R Markdown/Quarto and GitHub."
   },
   {
     "objectID": "index.html",
@@ -79,9 +79,9 @@
   {
     "objectID": "chapter1.html#r-and-rstudio-the-engine-and-the-dashboard",
     "href": "chapter1.html#r-and-rstudio-the-engine-and-the-dashboard",
-    "title": "Chapter 1: The Toolbox for a Data Scientist",
+    "title": "Chapter 1. The Toolbox for a Data Scientist: R Markdown, git, GitHub, R, and RStudio",
     "section": "",
-    "text": "In Lab 1: R and RStudio Installation, you will set up your environment. Think of it like this: * R (The Engine): The programming language that processes data. * RStudio (The Dashboard): The Integrated Development Environment (IDE) where you write your scripts and view your results."
+    "text": "In Lab 1: R and RStudio Installation, you will set up your environment: * R: The programming language that processes data. * RStudio: The Integrated Development Environment (IDE) where you write scripts and view results."
   },
   {
     "objectID": "chapter1.html#quarto-and-reproducibility",
@@ -107,8 +107,22 @@
   {
     "objectID": "chapter1.html#oer-references",
     "href": "chapter1.html#oer-references",
-    "title": "Chapter 1: The Toolbox for a Data Scientist",
+    "title": "Chapter 1. The Toolbox for a Data Scientist: R Markdown, git, GitHub, R, and RStudio",
     "section": "",
     "text": "Wickham, H., Çetinkaya-Rundel, M., & Grolemund, G. (2023). R for Data Science (2e)."
+  },
+  {
+    "objectID": "chapter1.html#r-markdown-and-reproducibility",
+    "href": "chapter1.html#r-markdown-and-reproducibility",
+    "title": "Chapter 1. The Toolbox for a Data Scientist: R Markdown, git, GitHub, R, and RStudio",
+    "section": "",
+    "text": "In Lab 2: RStudio Project and Quarto Documents, we introduce literate programming. This allows us to combine narrative text, mathematical notation (LaTeX), and executable code in one reproducible document."
+  },
+  {
+    "objectID": "chapter1.html#version-control-with-git-and-github",
+    "href": "chapter1.html#version-control-with-git-and-github",
+    "title": "Chapter 1. The Toolbox for a Data Scientist: R Markdown, git, GitHub, R, and RStudio",
+    "section": "",
+    "text": "In Lab 4: GitHub Repository, you will connect your local computer to the cloud. git tracks your changes, while GitHub hosts your professional portfolio. This ensures your work meets the highest standards of scientific reproducibility."
   }
 ]
