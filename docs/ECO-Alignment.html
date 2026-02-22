@@ -121,7 +121,7 @@ ul.task-list li input[type="checkbox"] {
   <li><a href="#detailed-module-breakdown" id="toc-detailed-module-breakdown" class="nav-link" data-scroll-target="#detailed-module-breakdown">Detailed Module Breakdown</a>
   <ul class="collapse">
   <li><a href="#module-1-foundational-tools" id="toc-module-1-foundational-tools" class="nav-link" data-scroll-target="#module-1-foundational-tools">Module 1: Foundational Tools</a></li>
-  <li><a href="#module-2-r-programming" id="toc-module-2-r-programming" class="nav-link" data-scroll-target="#module-2-r-programming">Module 2: R Programming</a></li>
+  <li><a href="#module-2-data-acquisition-preparation" id="toc-module-2-data-acquisition-preparation" class="nav-link" data-scroll-target="#module-2-data-acquisition-preparation">Module 2: Data Acquisition &amp; Preparation</a></li>
   </ul></li>
   </ul>
 </nav>
@@ -167,28 +167,34 @@ ul.task-list li input[type="checkbox"] {
 </thead>
 <tbody>
 <tr class="odd">
-<td style="text-align: left;"><strong>Toolbox</strong></td>
+<td style="text-align: left;"><strong>1. The Toolbox</strong></td>
 <td style="text-align: left;"><a href="./chapter1.html">Ch 1: The Toolbox</a></td>
-<td style="text-align: left;">Lab 1: Getting Started</td>
+<td style="text-align: left;"><strong>Labs 1–4:</strong> Installation, Projects, LaTeX, and GitHub</td>
 <td style="text-align: left;">Reproducible Workflow &amp; Setup</td>
 </tr>
 <tr class="even">
-<td style="text-align: left;"><strong>Foundations</strong></td>
-<td style="text-align: left;"><a href="./chapter2.html">Ch 2: R Foundations</a></td>
-<td style="text-align: left;">Lab 2: Basic Operations</td>
-<td style="text-align: left;">R Language Proficiency</td>
+<td style="text-align: left;"><strong>2. Data Foundations</strong></td>
+<td style="text-align: left;"><a href="./chapter2.html">Ch 2: Data Acquisition</a></td>
+<td style="text-align: left;"><strong>Labs 5–7:</strong> Getting Data, Collection, and Cleaning</td>
+<td style="text-align: left;">Data Import &amp; Wrangling Foundations</td>
 </tr>
 <tr class="odd">
-<td style="text-align: left;"><strong>Visuals</strong></td>
-<td style="text-align: left;"><a href="chapter3.qmd">Ch 3: Data Visualization</a></td>
-<td style="text-align: left;">Lab 3: Intro to ggplot2</td>
-<td style="text-align: left;">Exploratory Data Analysis</td>
+<td style="text-align: left;"><strong>3. Exploratory Analysis</strong></td>
+<td style="text-align: left;"><a href="chapter3.qmd">Ch 3: EDA</a></td>
+<td style="text-align: left;"><strong>Lab 8:</strong> Exploratory Data Analysis</td>
+<td style="text-align: left;">Descriptive Stats &amp; Visualization</td>
 </tr>
 <tr class="even">
-<td style="text-align: left;"><strong>Wrangling</strong></td>
-<td style="text-align: left;"><a href="chapter4.qmd">Ch 4: Data Transformation</a></td>
-<td style="text-align: left;">Lab 4: Dplyr Basics</td>
-<td style="text-align: left;">Data Cleaning &amp; Manipulation</td>
+<td style="text-align: left;"><strong>4. Statistical Inference</strong></td>
+<td style="text-align: left;"><a href="chapter4.qmd">Ch 4: Inference Foundations</a></td>
+<td style="text-align: left;"><strong>Labs 9–11:</strong> Distributions, Means, &amp; Proportions</td>
+<td style="text-align: left;">Probability &amp; Estimation</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;"><strong>5. Advanced Modeling</strong></td>
+<td style="text-align: left;"><a href="chapter5.qmd">Ch 5: Comparative Analysis</a></td>
+<td style="text-align: left;"><strong>Labs 12–17:</strong> Two-Sample Tests, ANOVA, &amp; Regression</td>
+<td style="text-align: left;">Hypothesis Testing &amp; Modeling</td>
 </tr>
 </tbody>
 </table>
@@ -201,17 +207,28 @@ ul.task-list li input[type="checkbox"] {
 <p><strong>ECO Topic:</strong> Setup of data science environment and version control. <strong>Learning Objective:</strong> Students will demonstrate proficiency in using R, RStudio, and GitHub for reproducible research.</p>
 <ul>
 <li><strong>OER Implementation:</strong> <a href="./chapter1.html">Chapter 1: The Toolbox</a></li>
-<li><strong>Lab Integration:</strong> Directly supports <strong>Lab 1</strong> by providing the theoretical “why” behind reproducibility and GitHub.</li>
-<li><strong>References:</strong> <em>R for Data Science (2e)</em>, Chapter 1.</li>
+<li><strong>Lab Integration:</strong> Directly supports:
+<ul>
+<li><strong>Lab 1: R and RStudio Installation</strong></li>
+<li><strong>Lab 2: RStudio Project and Quarto Documents</strong></li>
+<li><strong>Lab 3: Mathematical Notation in Quarto</strong></li>
+<li><strong>Lab 4: GitHub Repository</strong></li>
+</ul></li>
+<li><strong>References:</strong> <em>R for Data Science (2e)</em>, Ch. 1 &amp; 28.</li>
 </ul>
 </section>
-<section id="module-2-r-programming" class="level3">
-<h3 class="anchored" data-anchor-id="module-2-r-programming">Module 2: R Programming</h3>
-<p><strong>ECO Topic:</strong> Programming foundations, functions, and packages. <strong>Learning Objective:</strong> Students will write functions and utilize R packages to process data.</p>
+<section id="module-2-data-acquisition-preparation" class="level3">
+<h3 class="anchored" data-anchor-id="module-2-data-acquisition-preparation">Module 2: Data Acquisition &amp; Preparation</h3>
+<p><strong>ECO Topic:</strong> Data structures, import methods, and cleaning. <strong>Learning Objective:</strong> Students will perform data manipulation and preparation for analysis.</p>
 <ul>
-<li><strong>OER Implementation:</strong> <a href="./chapter2.html">Chapter 2: R Programming Foundations</a></li>
-<li><strong>Lab Integration:</strong> Provides the syntax foundations required for <strong>Lab 2</strong> (objects, vectors, and library loading).</li>
-<li><strong>References:</strong> <em>Hands-On Programming with R</em>, Parts 1 &amp; 2.</li>
+<li><strong>OER Implementation:</strong> <a href="./chapter2.html">Chapter 2: Data Acquisition</a></li>
+<li><strong>Lab Integration:</strong> Supports:
+<ul>
+<li><strong>Lab 5: Getting data into R</strong></li>
+<li><strong>Lab 6: Data collection</strong></li>
+<li><strong>Lab 7: Cleaning Data</strong></li>
+</ul></li>
+<li><strong>References:</strong> <em>R for Data Science (2e)</em>, “Import” and “Tidy” sections.</li>
 </ul>
 <hr>
 

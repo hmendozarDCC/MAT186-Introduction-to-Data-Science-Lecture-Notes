@@ -15,10 +15,11 @@ This table demonstrates how the theory on GitHub aligns with your practical lab 
 
 | Module | Lecture Chapter (GitHub) | Lab Manual Reference | ECO Learning Objective |
 | :--- | :--- | :--- | :--- |
-| **Toolbox** | [Ch 1: The Toolbox](chapter1.qmd) | Lab 1: Getting Started | Reproducible Workflow & Setup |
-| **Foundations** | [Ch 2: R Foundations](chapter2.qmd) | Lab 2: Basic Operations | R Language Proficiency |
-| **Visuals** | [Ch 3: Data Visualization](chapter3.qmd) | Lab 3: Intro to ggplot2 | Exploratory Data Analysis |
-| **Wrangling** | [Ch 4: Data Transformation](chapter4.qmd) | Lab 4: Dplyr Basics | Data Cleaning & Manipulation |
+| **1. The Toolbox** | [Ch 1: The Toolbox](chapter1.qmd) | **Labs 1–4:** Installation, Projects, LaTeX, and GitHub | Reproducible Workflow & Setup |
+| **2. Data Foundations** | [Ch 2: Data Acquisition](chapter2.qmd) | **Labs 5–7:** Getting Data, Collection, and Cleaning | Data Import & Wrangling Foundations |
+| **3. Exploratory Analysis** | [Ch 3: EDA](chapter3.qmd) | **Lab 8:** Exploratory Data Analysis | Descriptive Stats & Visualization |
+| **4. Statistical Inference** | [Ch 4: Inference Foundations](chapter4.qmd) | **Labs 9–11:** Distributions, Means, & Proportions | Probability & Estimation |
+| **5. Advanced Modeling** | [Ch 5: Comparative Analysis](chapter5.qmd) | **Labs 12–17:** Two-Sample Tests, ANOVA, & Regression | Hypothesis Testing & Modeling |
 
 ---
 
@@ -29,15 +30,22 @@ This table demonstrates how the theory on GitHub aligns with your practical lab 
 **Learning Objective:** Students will demonstrate proficiency in using R, RStudio, and GitHub for reproducible research.
 
 * **OER Implementation:** [Chapter 1: The Toolbox](chapter1.qmd)
-* **Lab Integration:** Directly supports **Lab 1** by providing the theoretical "why" behind reproducibility and GitHub.
-* **References:** *R for Data Science (2e)*, Chapter 1.
+* **Lab Integration:** Directly supports:
+    * **Lab 1: R and RStudio Installation**
+    * **Lab 2: RStudio Project and Quarto Documents**
+    * **Lab 3: Mathematical Notation in Quarto**
+    * **Lab 4: GitHub Repository**
+* **References:** *R for Data Science (2e)*, Ch. 1 & 28.
 
-### Module 2: R Programming
-**ECO Topic:** Programming foundations, functions, and packages.
-**Learning Objective:** Students will write functions and utilize R packages to process data.
+### Module 2: Data Acquisition & Preparation
+**ECO Topic:** Data structures, import methods, and cleaning.
+**Learning Objective:** Students will perform data manipulation and preparation for analysis.
 
-* **OER Implementation:** [Chapter 2: R Programming Foundations](chapter2.qmd)
-* **Lab Integration:** Provides the syntax foundations required for **Lab 2** (objects, vectors, and library loading).
-* **References:** *Hands-On Programming with R*, Parts 1 & 2.
+* **OER Implementation:** [Chapter 2: Data Acquisition](chapter2.qmd)
+* **Lab Integration:** Supports:
+    * **Lab 5: Getting data into R**
+    * **Lab 6: Data collection**
+    * **Lab 7: Cleaning Data**
+* **References:** *R for Data Science (2e)*, "Import" and "Tidy" sections.
 
 ---
