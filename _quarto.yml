@@ -1,0 +1,22 @@
+project:
+  type: website
+  output-dir: docs  # Important for GitHub Pages
+
+website:
+  title: "MAT 186 Lecture Notes"
+  navbar:
+    left:
+      - href: index.qmd
+        text: Home
+      - href: chapter1.qmd
+        text: "1. Toolbox"
+      - href: chapter2.qmd
+        text: "2. Programming"
+      - href: ECO-Alignment.qmd
+        text: "ECO Alignment"
+
+format:
+  html:
+    theme: cosmo
+    toc: true
+    code-fold: true # Allows students to hide/show R code

@@ -1,0 +1,6 @@
+
+
+::: {.callout-tip}
+## Why this matters for MAT 186
+According to our course outline (ECO), mastering GitHub is not just about storage—it is about **Reproducibility**, a core pillar of modern data science.
+:::

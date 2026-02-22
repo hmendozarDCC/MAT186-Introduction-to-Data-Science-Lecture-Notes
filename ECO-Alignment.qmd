@@ -1,0 +1,24 @@
+---
+title: "ECO Alignment & Learning Objectives"
+format: html
+---
+
+## Alignment with MAT 186 Extended Course Outline (ECO)
+
+This document maps the **Interactive Lecture Notes** to the official Dutchess Community College ECO.
+
+### Module 1: Foundational Tools
+**ECO Topic:** Setup of data science environment and version control.
+**Learning Objective:** Students will demonstrate proficiency in using R, RStudio, and GitHub for reproducible research.
+
+* **OER Implementation:** [Chapter 1: The Toolbox](chapter1.qmd)
+* **References:** *R for Data Science (2e)*, Chapter 1.
+
+### Module 2: R Programming
+**ECO Topic:** Programming foundations, functions, and packages.
+**Learning Objective:** Students will write functions and utilize R packages to process data.
+
+* **OER Implementation:** [Chapter 2: R Programming Foundations](chapter2.qmd)
+* **References:** *Hands-On Programming with R*, Parts 1 & 2.
+
+---

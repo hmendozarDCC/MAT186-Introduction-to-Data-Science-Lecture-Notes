@@ -1,0 +1,23 @@
+[
+  {
+    "objectID": "chapter1.html",
+    "href": "chapter1.html",
+    "title": "MAT 186 Lecture Notes",
+    "section": "",
+    "text": "TipWhy this matters for MAT 186\n\n\n\nAccording to our course outline (ECO), mastering GitHub is not just about storage—it is about Reproducibility, a core pillar of modern data science."
+  },
+  {
+    "objectID": "ECO-Alignment.html",
+    "href": "ECO-Alignment.html",
+    "title": "ECO Alignment & Learning Objectives",
+    "section": "",
+    "text": "This document maps the Interactive Lecture Notes to the official Dutchess Community College ECO.\n\n\nECO Topic: Setup of data science environment and version control. Learning Objective: Students will demonstrate proficiency in using R, RStudio, and GitHub for reproducible research.\n\nOER Implementation: Chapter 1: The Toolbox\nReferences: R for Data Science (2e), Chapter 1.\n\n\n\n\nECO Topic: Programming foundations, functions, and packages. Learning Objective: Students will write functions and utilize R packages to process data.\n\nOER Implementation: Chapter 2: R Programming Foundations\nReferences: Hands-On Programming with R, Parts 1 & 2."
+  },
+  {
+    "objectID": "ECO-Alignment.html#alignment-with-mat-186-extended-course-outline-eco",
+    "href": "ECO-Alignment.html#alignment-with-mat-186-extended-course-outline-eco",
+    "title": "ECO Alignment & Learning Objectives",
+    "section": "",
+    "text": "This document maps the Interactive Lecture Notes to the official Dutchess Community College ECO.\n\n\nECO Topic: Setup of data science environment and version control. Learning Objective: Students will demonstrate proficiency in using R, RStudio, and GitHub for reproducible research.\n\nOER Implementation: Chapter 1: The Toolbox\nReferences: R for Data Science (2e), Chapter 1.\n\n\n\n\nECO Topic: Programming foundations, functions, and packages. Learning Objective: Students will write functions and utilize R packages to process data.\n\nOER Implementation: Chapter 2: R Programming Foundations\nReferences: Hands-On Programming with R, Parts 1 & 2."
+  }
+]
