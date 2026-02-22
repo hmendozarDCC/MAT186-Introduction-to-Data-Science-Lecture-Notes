@@ -1,21 +1,79 @@
-project:
-  type: website
-  output-dir: docs  # Important for GitHub Pages
+---
+title: "Chapter 3. Getting and Wrangling Data"
+subtitle: "Collecting Data, Codebooks, raw data, cleaning data, and Data Manipulation"
+format: html
+---
 
-website:
-  navbar:
-    left:
-      - text: "Home"
-        href: index.qmd
-      - text: "1. The Toolbox"
-        href: chapter1.qmd
-      - text: "2. R Foundations"
-        href: chapter2.qmd
-      - text: "ECO Alignment"
-        href: ECO-Alignment.qmd
+::: {.callout-note}
+## Learning Objectives (ECO Alignment)
+By the end of this chapter, you will be able to:
+1. Explain the difference between raw and tidy data.
+2. Utilize codebooks to interpret data variables.
+3. Clean data using `dplyr` verbs (filter, select, mutate).
+4. Handle missing values and rename variables for clarity.
+:::
 
-format:
-  html:
-    theme: cosmo
-    toc: true
-    code-fold: true # Allows students to hide/show R code
+# 3.1 Raw Data vs. Tidy Data
+Data rarely arrives in a format ready for analysis. **Raw data** is often "messy"—it may have inconsistent formatting, missing values, or confusing headers.
+
+
+
+In this course, we aim for **Tidy Data**:
+1. Each variable forms a column.
+2. Each observation forms a row.
+3. Each type of observational unit forms a table.
+
+# 3.2 Codebooks and Data Collection
+Before cleaning data, you must understand it. A **Codebook** (or data dictionary) is a document that describes the contents, structure, and layout of a dataset.
+
+For the `lbw.csv` dataset, the codebook tells us:
+* `low`: Indicator of birth weight less than 2.5kg (0 = No, 1 = Yes).
+* `smoke`: Smoking status during pregnancy (0 = No, 1 = Yes).
+* `lwt`: Mother's weight in pounds at the last menstrual period.
+
+# 3.3 Data Manipulation with dplyr
+In **Lab 7**, we use the `dplyr` package (part of the Tidyverse) to manipulate our data. We use the **pipe operator** `%>%` (or `|>`) to chain functions together.
+
+### Key "Verbs" for Data Cleaning:
+* `select()`: Pick specific columns (e.g., only `age` and `bwt`).
+* `filter()`: Pick rows based on conditions (e.g., only mothers who `smoke`).
+* `mutate()`: Create new columns (like we did with `grams_to_lbs`).
+* `rename()`: Change column names to be more descriptive.
+
+```{r}
+library(tidyverse)
+lbw <- read_csv("data/lbw.csv")
+
+# Example: Creating a subset of clean data
+lbw_clean <- lbw %>%
+  select(age, lwt, smoke, bwt) %>%
+  filter(age > 18) %>%
+  rename(mother_age = age, mother_weight = lwt)
+
+head(lbw_clean)
+```
+
+# 3.4 Handling Missing Data and Outliers
+Real-world data often has missing values, represented as NA in R.
+
+When cleaning data, we must decide:
+
+Remove: Delete rows with missing values using drop_na().
+
+Impute: Replace missing values with a mean or median.
+
+Identify Outliers: Use logical filters to find values that are physically impossible (e.g., a birth weight of 0 grams).
+
+**Lab Alignment**
+This chapter provides the theoretical foundation for:
+
+* **Lab 7: Cleaning Data**
+
+* **Lab 8: Exploratory Data Analysis (Introduction)**
+
+**OER References**
+
+* Wickham, H., et al. (2023). R for Data Science (2e): Data Tidying.
+* Bryan, J. STAT 545: Data wrangling, exploration, and analysis with R.
+
+* Bryan, J. Tidy Data Tutor.
