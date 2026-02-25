@@ -5,6 +5,30 @@ subtitle: "Interactive Lecture Notes"
 
 Welcome to the official OER Lecture Notes for MAT 186. These materials are designed to provide a theoretical and practical foundation in Data Science using R and Quarto.
 
+
+
+## Official Course Description
+This course introduces the basic ideas and techniques of data science including: **exploratory data analysis**; **experimental design and sampling**; relationships between one and several variables including **single and multiple regression** and **two-way tables**; **sampling distributions**; **inferential statistics** for means, proportions, and regression coefficients; and **simple ANOVA**. 
+
+The course includes a significant **computer component** using the software package **R**. 
+
+**Prerequisite:** Placement level 4 (see DCC Math Placement Table) or MAT 184 with a grade of C or better.
+
+---
+
+## Key Aspects of MAT 186 and the Program
+
+### Career Readiness & Microcredentials
+MAT 186 is a core component of our **three-course Data Analysis microcredential**. This program is specifically designed to prepare students for careers as **junior data analysts**, focusing on practical applications for business and marketing analytics.
+
+* **Course Focus:** We cover data visualization, data cleaning, and statistical analysis to interpret complex data patterns.
+* **Technical Skills:** Students master industry-standard tools and programming languages, specifically **R**, **RStudio**, and **Quarto**.
+
+### Institutional Distinction
+Dutchess Community College (DCC) is proud to be the **first community college in the nation** with an **American Statistical Association (ASA) Student Chapter**. This connection provides our students with unique networking and professional development opportunities in the field of statistics.
+
+---
+
 ## Course Goals
 - Master the Data Science workflow (Import, Tidy, Transform, Visualize, Model, Communicate).
 - Build reproducible reports using Quarto and GitHub.
@@ -14,6 +38,8 @@ Welcome to the official OER Lecture Notes for MAT 186. These materials are desig
 This project is an Open Educational Resource (OER). It is licensed under a [Creative Commons Attribution 4.0 International License](https://creativecommons.org/licenses/by/4.0/). 
 
 ## OER References
+
 These notes are built upon the following open resources:
 - *R for Data Science (2e)* by Hadley Wickham & Mine Çetinkaya-Rundel.
 - *Introduction to Modern Statistics* by Mine Çetinkaya-Rundel and Johanna Hardin.
+- *Hands-On Programming with R* by Garrett Grolemund.
