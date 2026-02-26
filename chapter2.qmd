@@ -100,7 +100,24 @@ Check your spelling (R is case-sensitive!).
 
 Use getwd() to verify R is looking in the correct folder.
 
+### usin import Dataset
 
+herramientas que lo ponen aún más fácil desde el primer día.
+
+𝟭. 𝗨𝘀𝗮 𝗜𝗺𝗽𝗼𝗿𝘁 𝗗𝗮𝘁𝗮𝘀𝗲𝘁 𝗽𝗮𝗿𝗮 𝗮𝗽𝗿𝗲𝗻𝗱𝗲𝗿 𝗮 𝗶𝗺𝗽𝗼𝗿𝘁𝗮𝗿
+La interfaz de RStudio te permite importar .csv, Excel o SPSS viendo en tiempo real cómo se genera el código.
+Consejo: copia ese código a tu script para garantizar la reproducibilidad.
+
+𝟮. 𝗨𝘀𝗮 𝗩𝗶𝗲𝘄() 𝗽𝗮𝗿𝗮 ver 𝘁𝘂𝘀 𝗱𝗮𝘁𝗼𝘀
+Ordena, filtra y busca valores rápidamente.
+No sustituye al código, pero permite una inspección inicial para evitar errores.
+
+𝟯. 𝗘𝘅𝗽𝗹𝗼𝗿𝗮 𝗿á𝗽𝗶𝗱𝗼 𝗰𝗼𝗻 ggpairs()
+Una sola función que genera matrices de gráficos y correlaciones automáticamente.
+Analiza la estructura, relaciones y posibles problemas antes de modelar.
+
+𝟰. 𝗔𝗽𝗿𝗲𝗻𝗱𝗲 ggplot2 𝗰𝗼𝗻 𝗮𝘆𝘂𝗱𝗮 𝘃𝗶𝘀𝘂𝗮𝗹 de esquisse
+El addin esquisse permite crear gráficos ggplot2 desde una interfaz (mediante clic) y convierte los cambios en código reproducible. Modifica colores, leyendas y títulos de forma sencilla.
 
 ## 2.4 Writing R Functions
 

@@ -1,0 +1,69 @@
+---
+title: "Chapter 4. Exploratory Data Analysis"
+subtitle: "Univariate and Multivariate techniques, and the basic principles of constructing data graphics"
+format: html
+---
+
+::: {.callout-note}
+## Learning Objectives (ECO Alignment)
+By the end of this chapter, you will be able to:
+1. Apply the "Grammar of Graphics" to create professional visualizations.
+2. Perform **Univariate Analysis** to understand the distribution of a single variable.
+3. Perform **Multivariate Analysis** to identify relationships between two or more variables.
+4. Interpret patterns, outliers, and clusters in real-world data like `lbw.csv`.
+:::
+
+# 4.1 The Philosophy of EDA
+Exploratory Data Analysis (EDA) is an iterative cycle. We use visualization and transformation to explore our data, looking for patterns or anomalies before we move on to formal statistical modeling.
+
+
+
+# 4.2 Principles of Data Graphics: `ggplot2`
+In R, we use the `ggplot2` package, which is based on the **Grammar of Graphics**. Every plot is built in layers:
+1. **Data:** The dataframe (e.g., `lbw`).
+2. **Aesthetics (`aes`):** The mapping of variables to visual properties (x-axis, y-axis, color).
+3. **Geoms:** The geometric shapes (bars, points, lines).
+
+# 4.3 Univariate Analysis
+We begin by looking at one variable at a time. This helps us understand the "shape" of our data (skewness, central tendency, and spread).
+
+
+
+### Numerical Variables: Histograms
+```{r}
+library(tidyverse)
+lbw <- read_csv("data/lbw.csv")
+
+```
+
+
+# Visualizing the distribution of mother's weight (lwt)
+```{r}
+ggplot(lbw, aes(x = lwt)) +
+  geom_histogram(binwidth = 10, fill = "steelblue", color = "white") +
+  labs(title = "Distribution of Maternal Weight", x = "Weight (lbs)", y = "Count")
+  
+```
+
+
+## 4.5 Tech Spotlight: Interactive Plotting with `esquisse`
+
+While the Grammar of Graphics is powerful, it can be intimidating to remember every function name. In MAT 186, we use a tool called **esquisse**—an RStudio "Add-in" that provides a drag-and-drop interface for `ggplot2`.
+
+
+
+### Why we use `esquisse`:
+1.  **Exploration:** Quickly flip between a bar chart and a boxplot to see which represents the `lbw.csv` data better.
+2.  **Code Learning:** Once you create a plot you like, `esquisse` shows you the exact `ggplot2` code used to create it. 
+3.  **Professional Polish:** You can easily change colors, labels, and themes without searching through documentation.
+
+### How to use it:
+To start the tool, you can use the "Addins" menu in RStudio or run the following code in your console:
+```{r}
+# Install if you haven't already
+# install.packages("esquisse")
+
+# Launch the tool using our dataset
+esquisse::esquisser(lbw_data)
+```
+
