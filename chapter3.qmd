@@ -71,9 +71,21 @@ This chapter provides the theoretical foundation for:
 
 * **Lab 8: Exploratory Data Analysis (Introduction)**
 
-**OER References**
+## OER References & Supplemental Reading
 
-* Wickham, H., et al. (2023). R for Data Science (2e): Data Tidying.
-* Bryan, J. STAT 545: Data wrangling, exploration, and analysis with R.
+This chapter's content on data wrangling and tidy data is based on the following Open Educational Resources:
 
-* Bryan, J. Tidy Data Tutor.
+* **Primary Text:** Wickham, H., Çetinkaya-Rundel, M., & Grolemund, G. (2023). *R for Data Science (2e)*. [Chapter 5: Data Tidying](https://r4ds.hadley.nz/data-tidy.html). 
+    * *Focus: The "Tidy Data" philosophy and pivot functions.*
+
+* **Statistical Foundation:** Çetinkaya-Rundel, M., & Hardin, J. (2021). *Introduction to Modern Statistics (1st Ed)*. [Chapter 1: Data Basics](https://openintro-ims.netlify.app/data-hello).
+    * *Focus: Data terminology, variables, and sampling.*
+
+* **Technical Reference:** Bryan, J. *STAT 545: Data wrangling, exploration, and analysis with R*. [Tidy Data and the Tidyverse](https://stat545.com/).
+    * *Focus: Practical cleaning workflows and the Tidy Data Tutor.*
+
+---
+::: {.callout-note}
+## License
+These materials are adapted under the [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/) and [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/) licenses.
+:::
