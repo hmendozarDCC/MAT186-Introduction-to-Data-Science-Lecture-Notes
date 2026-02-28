@@ -11,6 +11,8 @@ website:
         href: chapter1.qmd
       - text: "2. R Foundations"
         href: chapter2.qmd
+      - text: "3. Getting and Wrangling Data"
+        href: chapter3.qmd
       - text: "ECO Alignment"
         href: ECO-Alignment.qmd
 
