@@ -30,9 +30,25 @@ Dutchess Community College (DCC) is proud to be the **first community college in
 ---
 
 ## Course Goals
-- Master the Data Science workflow (Import, Tidy, Transform, Visualize, Model, Communicate).
-- Build reproducible reports using Quarto and GitHub.
-- Apply statistical inference to real-world datasets.
+
+Upon successfully completing this course, students will be able to 
+
+1. Perform exploratory data analysis on both univariate and bivariate data, including construction of appropriate graphical representations of the data, written descriptions of the distributions, as well as the choice and presentation of appropriate summary measures of center and spread.
+
+2. Perform a correlation and regression analysis of bivariate and multivariate data, including choice of appropriate data transformations, analysis of model, and interpretation of results.
+
+3. Construct and interpret both parametric and nonparametric confidence intervals concerning population means, population proportions, and independence of two binary categorical variables, and communicate results in clear written format.
+
+4. Perform both parametric and nonparametric hypothesis tests concerning population means, population proportions, and independence of two binary categorical variables, and interpret and communicate results in clear written format.
+
+5. Make use of the statistical software R to accomplish the above outcomes.
+
+6. Critique data collection techniques, as well as basic design of experiments.
+
+7. Master the Data Science workflow (Import, Tidy, Transform, Visualize, Model, Communicate).
+
+8.  Build reproducible reports using Quarto and GitHub.
+
 
 ## License
 This project is an Open Educational Resource (OER). It is licensed under a [Creative Commons Attribution 4.0 International License](https://creativecommons.org/licenses/by/4.0/). 

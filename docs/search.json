@@ -39,7 +39,7 @@
     "href": "index.html#course-goals",
     "title": "MAT 186: Introduction to Data Science",
     "section": "Course Goals",
-    "text": "Course Goals\n\nMaster the Data Science workflow (Import, Tidy, Transform, Visualize, Model, Communicate).\nBuild reproducible reports using Quarto and GitHub.\nApply statistical inference to real-world datasets."
+    "text": "Course Goals\nUpon successfully completing this course, students will be able to\n\nPerform exploratory data analysis on both univariate and bivariate data, including construction of appropriate graphical representations of the data, written descriptions of the distributions, as well as the choice and presentation of appropriate summary measures of center and spread.\nPerform a correlation and regression analysis of bivariate and multivariate data, including choice of appropriate data transformations, analysis of model, and interpretation of results.\nConstruct and interpret both parametric and nonparametric confidence intervals concerning population means, population proportions, and independence of two binary categorical variables, and communicate results in clear written format.\nPerform both parametric and nonparametric hypothesis tests concerning population means, population proportions, and independence of two binary categorical variables, and interpret and communicate results in clear written format.\nMake use of the statistical software R to accomplish the above outcomes.\nCritique data collection techniques, as well as basic design of experiments.\nMaster the Data Science workflow (Import, Tidy, Transform, Visualize, Model, Communicate).\nBuild reproducible reports using Quarto and GitHub."
   },
   {
     "objectID": "index.html#license",
